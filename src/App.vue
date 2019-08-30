@@ -141,7 +141,6 @@ h2 {
 
 .wrap {
   display: flex;
-  width: 100%;
 }
 
 p {
