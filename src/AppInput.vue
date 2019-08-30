@@ -1,0 +1,38 @@
+<template>
+  <div>
+    <input :value="value" @input="OnInput" />
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    value: {
+      type: String,
+      default: ""
+    }
+  },
+  methods: {
+    OnInput(event) {
+      this.$emit("input", event.target.value);
+    }
+  }
+};
+</script>
+
+<style scoped>
+input {
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  width: 300px;
+}
+
+@media screen and (max-width: 670px) {
+  input {
+    width: 100%;
+    padding: 0;
+    height: 30px;
+  }
+}
+</style>
