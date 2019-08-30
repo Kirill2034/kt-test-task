@@ -26,6 +26,7 @@ input {
   padding: 5px;
   font-size: 14px;
   width: 300px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 670px) {
