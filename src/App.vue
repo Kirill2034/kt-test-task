@@ -38,7 +38,7 @@ export default {
       logo: "To-Do List",
       todos: [],
       currentPage: 0,
-      elementsPerPage: 3,
+      elementsPerPage: 10,
       isAsc: true,
       editingTodo: null
     };
