@@ -27,7 +27,7 @@ export default {
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid black;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .app-button:active {
   background-color: rgb(82, 82, 82);
