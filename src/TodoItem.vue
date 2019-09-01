@@ -2,11 +2,13 @@
   <div class="todo-item">
     <app-checkbox :isDone="todo.isDone" @toggleDone="$emit('toggleDone')"></app-checkbox>
     <p>{{ todo.name }}</p>
+    <div class="wrap">
     <div class="img__wrap" @click="$emit('delete')">
       <img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-22-256.png" title="Удалить">
     </div>
     <div class="img__wrap" @click="$emit('edit')">
       <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_mode_edit_48px-256.png" title="Редактировать">
+    </div>
     </div>
   </div>
 </template>
@@ -34,10 +36,14 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
+  max-width: 500px;
 }
 .todo-item p {
   margin-right: 15px;
+  font-family: 'Chilanka', cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .img__wrap {
@@ -58,5 +64,10 @@ export default {
 
 img {
    width:20px;
+}
+
+.wrap {
+  display: flex;
+  margin-left: auto;
 }
 </style>
