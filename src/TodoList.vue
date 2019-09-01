@@ -29,5 +29,6 @@ export default {
 <style scoped>
 .todo-list {
   font-size: 18px;
+  font-family: 'Chilanka', cursive;
 }
 </style>

@@ -2,9 +2,11 @@
   <div class="todo">
     <h2>{{ logo }}</h2>
     <div class="wrapper">
+      <div class="wrap__box">
       <app-input :value="name" @input="onNameChanged"></app-input>
+      <app-button @click="onClick" text="Добавить"></app-button>
+      </div>
       <div class="wrap">
-        <app-button @click="onClick" text="Добавить"></app-button>
         <app-sorted @sorted="toggleSort" :isAsc="isAsc"></app-sorted>
       </div>
     </div>
@@ -33,7 +35,7 @@ export default {
   data() {
     return {
       name: "",
-      logo: "Todo List",
+      logo: "To-Do List",
       todos: [],
       currentPage: 0,
       elementsPerPage: 3,
@@ -125,7 +127,7 @@ export default {
   border: 1px solid black;
   margin: 0 auto;
   padding: 10px;
-  background-color: rgb(243, 207, 174);
+  background-color: rgba(170, 165, 211, 0.5);
   position: relative;
 }
 
@@ -151,6 +153,10 @@ button {
   margin-right: 5px;
 }
 
+.wrap__box {
+  display: flex;
+}
+
 @media screen and (max-width: 670px){
   .todo {
     display: flex;
@@ -164,6 +170,8 @@ button {
   }
   
   .wrap {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 30px;
   }
