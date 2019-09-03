@@ -3,7 +3,7 @@
     <h2>{{ logo }}</h2>
     <div class="wrapper">
       <div class="wrap__box">
-      <app-input :value="name" @input="onNameChanged"></app-input>
+      <app-input @keyup.enter="onClick" :value="name" @input="onNameChanged" @keyUp="onClick"></app-input>
       <app-button @click="onClick" text="Добавить"></app-button>
       </div>
       <div class="wrap">
