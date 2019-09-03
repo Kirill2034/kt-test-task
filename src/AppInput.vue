@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input :value="value" @input="OnInput" />
+    <input :value="value" @input="OnInput" @keyup.enter="$emit('keyUp')"/>
   </div>
 </template>
 
